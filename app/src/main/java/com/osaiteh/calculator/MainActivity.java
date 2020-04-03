@@ -154,22 +154,22 @@ public class MainActivity extends AppCompatActivity {
                 mNumberTwo = Float.parseFloat(inputNumber.getText() + "");
 
                 if (plus_m == true) {
-                    inputNumber.setText(mNumberOne + mNumberTwo + "");
+                    seeResult.setText(mNumberOne + mNumberTwo + "");
                     plus_m = false;
                 }
 
                 if (minus_m== true) {
-                    inputNumber.setText(mNumberOne - mNumberTwo + "");
+                   seeResult.setText(mNumberOne - mNumberTwo + "");
                    minus_m = false;
                 }
 
                 if (multiply_m == true) {
-                    inputNumber.setText(mNumberOne * mNumberTwo + "");
+                    seeResult.setText(mNumberOne * mNumberTwo + "");
                     multiply_m = false;
                 }
 
                 if (divide_m == true) {
-                    inputNumber.setText(mNumberOne / mNumberTwo + "");
+                    seeResult.setText(mNumberOne / mNumberTwo + "");
                     divide_m = false;
                 }
             }
