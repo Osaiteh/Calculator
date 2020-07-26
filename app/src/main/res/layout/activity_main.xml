@@ -8,13 +8,11 @@
 
     <TextView
         android:id="@+id/seeResult"
+        style="@style/SeeResultTextView"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="100dp"
         android:gravity="center_vertical|end"
-        android:text="@string/seeResult"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textSize="56sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/backspace"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,34 +21,37 @@
     <EditText
         android:id="@+id/inputNumber"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="52dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:gravity="start|center_vertical"
-        android:inputType="numberSigned|numberDecimal|numberPassword"
+        android:inputType="none"
+        android:textSize="40sp"
         app:layout_constraintBottom_toTopOf="@+id/seeResult"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/six"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/six"
         app:layout_constraintBottom_toTopOf="@+id/nine"
         app:layout_constraintEnd_toStartOf="@+id/plus"
-        app:layout_constraintHorizontal_weight="1" />
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/five" />
 
     <Button
         android:id="@+id/seven"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/seven"
         app:layout_constraintBottom_toTopOf="@+id/decimalPoint"
         app:layout_constraintHorizontal_weight="1"
@@ -58,151 +59,158 @@
 
     <Button
         android:id="@+id/zero"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/zero"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/equalsTo"
         app:layout_constraintStart_toEndOf="@+id/decimalPoint" />
 
     <Button
         android:id="@+id/multiply"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/OperationButtons"
+        android:layout_width="102dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/multiply"
         app:layout_constraintBottom_toTopOf="@+id/equalsTo"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/divide"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/OperationButtons"
+        android:layout_width="103dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/divide"
         app:layout_constraintBottom_toTopOf="@+id/minus"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/minus"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/OperationButtons"
+        android:layout_width="102dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/minus"
         app:layout_constraintBottom_toTopOf="@+id/plus"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
+        style="@style/OperationButtons"
         android:id="@+id/plus"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        android:layout_width="102dp"
         android:text="@string/plus"
         app:layout_constraintBottom_toTopOf="@+id/multiply"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/nine"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/nine"
         app:layout_constraintBottom_toTopOf="@+id/equalsTo"
-        app:layout_constraintEnd_toStartOf="@+id/multiply" />
+        app:layout_constraintEnd_toStartOf="@+id/multiply"
+        app:layout_constraintStart_toEndOf="@+id/eight" />
 
     <Button
         android:id="@+id/backspace"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/OperationButtons"
+        android:layout_width="103dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/backspace"
         app:layout_constraintBottom_toTopOf="@+id/three"
         app:layout_constraintEnd_toStartOf="@+id/divide" />
 
     <Button
         android:id="@+id/eight"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/eight"
         app:layout_constraintBottom_toTopOf="@+id/zero"
         app:layout_constraintStart_toEndOf="@+id/seven" />
 
     <Button
         android:id="@+id/equalsTo"
+        style="@style/EqualsToButton"
         android:layout_width="204dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        android:layout_marginBottom="40dp"
         android:text="@string/equalsTo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/decimalPoint"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/decimalPoint"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/cButton"
-        android:layout_width="204dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/OperationButtons"
+        android:layout_width="205dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:includeFontPadding="false"
         android:text="@string/cButton"
         app:layout_constraintBottom_toTopOf="@+id/one"
+        app:layout_constraintEnd_toStartOf="@+id/backspace"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/one"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/one"
         app:layout_constraintBottom_toTopOf="@+id/four"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/two"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/two"
         app:layout_constraintBottom_toTopOf="@+id/five"
         app:layout_constraintStart_toEndOf="@+id/one" />
 
     <Button
         android:id="@+id/three"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/three"
         app:layout_constraintBottom_toTopOf="@+id/six"
-        app:layout_constraintEnd_toStartOf="@+id/minus" />
+        app:layout_constraintEnd_toStartOf="@+id/minus"
+        app:layout_constraintStart_toEndOf="@+id/two" />
 
     <Button
         android:id="@+id/four"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/four"
         app:layout_constraintBottom_toTopOf="@+id/seven"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/five"
-        android:layout_width="100dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="4dp"
-        android:fontFamily="@font/rock_salt"
+        style="@style/NumberButtons"
+        android:layout_width="102dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="2dp"
         android:text="@string/five"
         app:layout_constraintBottom_toTopOf="@+id/eight"
         app:layout_constraintStart_toEndOf="@+id/four" />

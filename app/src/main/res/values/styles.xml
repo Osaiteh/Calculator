@@ -3,9 +3,45 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#F46E44</item>
+        <item name="colorPrimaryDark">#FF5722</item>
+        <item name="colorAccent">#FB3E02</item>
+    </style>
+
+    <style name="NumberButtons">
+        <item name = "android:layout_height">90dp</item>
+        <item name = "android:fontFamily">@font/bungee</item>
+        <item name = "android:background">#FFFFFF</item>
+        <item name = "android:textColorHighlight">#DCD8D8</item>
+        <item name = "android:textSize">36sp</item>
+        <item name = "android:textStyle">bold</item>>
+    </style>
+
+    <style name="OperationButtons">
+        <item name = "android:layout_height">90dp</item>
+        <item name = "android:fontFamily">@font/bungee</item>
+        <item name = "android:textColorHighlight">#FFFFFF</item>
+        <item name = "android:textSize">36sp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textColor">#FF5722</item>
+    </style>
+
+    <style name="EqualsToButton">
+        <item name = "android:layout_height">90dp</item>
+        <item name = "android:fontFamily">@font/bungee</item>
+        <item name = "android:textColorHighlight">#FFFFFF</item>
+        <item name = "android:background">#FF5722</item>
+        <item name = "android:textSize">36sp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="SeeResultTextView">
+        <item name = "android:fontFamily">@font/bungee</item>
+        <item name = "android:background">#FFFFFF</item>
+        <item name = "android:textSize">46sp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name = "android:textColor">#FF5722</item>
     </style>
 
 </resources>
